@@ -128,6 +128,18 @@ namespace SGA.UI
 
         }
 
+        private void OnValidate()
+        {
+            Transform tempWindowTransform = transform.parent;
+            while (window == null && tempWindowTransform != null)
+            {
+                if (tempWindowTransform.TryGetComponent(out UIWindow _window))
+                {
+                    window = _window;
+                }
+                tempWindowTransform = tempWindowTransform.parent;
+            }
+        }
     }
 
     public enum UsedChildNumber

@@ -7,7 +7,7 @@ using UnityEngine.UI;
 namespace SGA.UI
 {
 
-    public class window : UIWindow
+    public class Window : UIWindow
     {
         public ActionButton[] actionButtons;
         Dictionary<string, Button> keyButtonDictionary;

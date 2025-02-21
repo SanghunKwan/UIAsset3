@@ -21,8 +21,7 @@ namespace SGA.UI
         {
             windowManager = transform.parent.GetComponent<WindowManager>();
             cancelPopup = windowManager.transform.Find(cancelPopupName).GetComponent<UIWindow>();
-
-            UnityEngine.UI.LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
+            
             keyButtonDictionary = new Dictionary<string, UnityEngine.UI.Button>();
             int length = actionButtons.Length;
 

@@ -27,5 +27,19 @@ namespace SGA.Data
         {
             interactComponent.SliderNToggleObject.CopyValue(backupObject);
         }
+        private void OnValidate()
+        {
+            interactComponent = GetComponent<InteractionWithScriptableObject>();
+
+            Transform tempWindowTransform = transform.parent;
+            while (complexWindow == null && tempWindowTransform != null)
+            {
+                if (tempWindowTransform.TryGetComponent(out ComplexWindow _window))
+                {
+                    complexWindow = _window;
+                }
+                tempWindowTransform = tempWindowTransform.parent;
+            }
+        }
     }
 }

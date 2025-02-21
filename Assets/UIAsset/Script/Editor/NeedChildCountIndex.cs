@@ -10,7 +10,6 @@ namespace SGA.Editors
         SerializedProperty toggleNum;
         SerializedProperty sliderNum;
 
-
         private void OnEnable()
         {
             toggleNum = serializedObject.FindProperty("toggleUsingNum");

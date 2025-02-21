@@ -32,6 +32,7 @@ namespace SGA.UI
         {
             m_rectTransform = GetComponent<RectTransform>();
             originalPosition = m_rectTransform.position;
+            LayoutRebuilder.ForceRebuildLayoutImmediate(transform as RectTransform);
         }
 
         public void SetVisible(bool onoff)
